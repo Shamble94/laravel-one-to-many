@@ -14,8 +14,9 @@
             <img src="{{ asset("/img/placeholder1.jpg") }}" alt="{{ $project->name}}" width="150">
             @endif
             <p>{{ $project->description }}</p>
+            <p>{{ $project->type->name }}</p>
             <p>{{ $project->assigned_by }}</p>
-        </div>
+            </div>
     </div>
 </div>
 
