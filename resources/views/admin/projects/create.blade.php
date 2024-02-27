@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label class="mt-3" for="description">Descrizione</label>
-                <textarea type="text" name="description" id="description" class="form-control" placeholder="Descrizione fumetto" value="{{ old("description")}}"></textarea>
+                <textarea type="text" name="description" id="description" class="form-control" placeholder="Descrizione progetto" value="{{ old("description")}}"></textarea>
                 @error('description')
                     <div class ="text-danger">{{ $message }}</div>
                 @enderror
