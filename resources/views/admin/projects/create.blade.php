@@ -40,6 +40,18 @@
                 @enderror
             </div>
             <div class="form-group">
+                <label class="mt-3" for="type_id">Seleziona tipo di post</label>
+                <select class="form-select" name="type_id" id="type_id">
+                    <option value="">Seleziona tipologia di post</option>
+                    @foreach($type as $types)
+	                	<option value = "{{ $types->id }}"> {{ $types->name }} 	</option>
+                    @endforeach      
+                </select>   
+                    @error('type_id')
+                    <div class ="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="form-group">
                 <label class="mt-3" for="assigned_by">Assigned by</label>
                 <textarea type="text" name="assigned_by" id="assigned_by" class="form-control" placeholder="Descrizione fumetto" value="{{ old("assigned_by")}}"></textarea>
                 @error('assigned_by')

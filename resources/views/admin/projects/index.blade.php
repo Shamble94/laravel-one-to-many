@@ -22,6 +22,7 @@
                             <th>Name</th>
                             <th>Slug</th>
                             <th>Description</th>
+                            <th>Category</th>
                             <th>Assigned by</th>
                             <th>Tools</th>
                         </tr>
@@ -33,6 +34,7 @@
                                 <td>{{ $project->name}}</td>
                                 <td>{{ $project->slug}}</td>
                                 <td>{{ Str::limit($project->description, 30, "(...)") }}</td>
+                                <td>{{ $project->type ? $project->type->name : "Senza categoria"}}</td>
                                 <td>{{ $project->assigned_by}}</td>
                                 <td>
                                     <a href="{{ route("admin.projects.show", ["project" => $project->id])}}" class="btn btn-sm btn-square btn-primary"><i class=" fa-solid fa-eye"></i></a>

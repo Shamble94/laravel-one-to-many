@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+
+use App\Models\Type;
 class ProjectController extends Controller
 {
     /**
@@ -29,8 +31,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        
-        return view("admin.projects.create");
+        $type = Type::all();
+        return view("admin.projects.create", compact("type"));
     }
 
     /**
