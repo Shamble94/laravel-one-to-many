@@ -32,9 +32,9 @@
                                     <a href="{{ route("admin.types.show", ["type" => $type->id])}}" class="btn btn-sm btn-square btn-primary"><i class=" fa-solid fa-eye"></i></a>
                                     <button class="btn btn-sm btn-square btn-danger" data-bs-toggle="modal" 
                                         data-bs-target="#modal_type_delete-{{ $type->id }}" 
-                                        data-projectid= "{{ $type->id }}" data-postname="{{ $type->name }}" >Elimina
+                                        data-id= "{{ $type->id }}" data-name="{{ $type->name }}"  data-type="types">Elimina
                                     </button>
-                                    {{-- @include("admin.types.modal_delete") --}}
+                                     @include("admin.types.modal_delete") 
                                 </td>
                             </tr>
                             @endforeach  
