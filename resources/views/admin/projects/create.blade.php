@@ -20,14 +20,14 @@
             @csrf
             <div class="form-group">
                 <label class="mt-3" for="name">Titolo</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Nome progetto" required  value="{{ old("name")}}">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Nome progetto" required  value="{{ old("name") }}">
                 @error('name')
                     <div class ="text-danger">{{ $message }}</div>
                 @enderror
             </div>
             <div class="form-group">
                 <label class="mt-3" for="description">Descrizione</label>
-                <textarea type="text" name="description" id="description" class="form-control" placeholder="Descrizione progetto" value="{{ old("description")}}"></textarea>
+                <textarea type="text" name="description" id="description" class="form-control" placeholder="Descrizione progetto" >{{ old("description") }}</textarea>
                 @error('description')
                     <div class ="text-danger">{{ $message }}</div>
                 @enderror
@@ -53,7 +53,7 @@
             </div>
             <div class="form-group">
                 <label class="mt-3" for="assigned_by">Assigned by</label>
-                <textarea type="text" name="assigned_by" id="assigned_by" class="form-control" placeholder="Descrizione fumetto" value="{{ old("assigned_by")}}"></textarea>
+                <textarea type="text" name="assigned_by" id="assigned_by" class="form-control" placeholder="Descrizione fumetto">{{ old("assigned_by") }}</textarea>
                 @error('assigned_by')
                     <div class ="text-danger">{{ $message }}</div>
                 @enderror
