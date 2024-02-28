@@ -5,7 +5,6 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mt-3">
-            <p>{{ $project->id }}</p>
             <h2>{{ $project->name }}</h2>
             <p>{{ $project->slug }}</p>
             @if($project->cover_image !== null)
