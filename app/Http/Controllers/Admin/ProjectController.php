@@ -115,7 +115,7 @@ class ProjectController extends Controller
         
         if($request->hasFile("cover_image")){
             if($project->cover_image != null){
-                Storage::delete($project->cover_image);
+                Storage::disk("public")->delete($project->cover_image);
             }
         $path= Storage::disk("public")->put("project_images", $form_data["cover_image"]);
         $form_data["cover_image"] = $path;
